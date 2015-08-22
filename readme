@@ -3,3 +3,5 @@ This is a Chatbot for Twitch's IRC based chat.  This branch uses mSL or (mIRC Sc
 more information can be found on the wiki pages or at twitch.tv/Navi_Bot
 
 Currently moderation functions are limited
+
+Only one of the above files is required.  The with header is prefered, the without header is provided for compatability with some older versions of mIRC that have issues with file legnth
