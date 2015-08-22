@@ -92,6 +92,7 @@ on *:PART:#:{
 ;moderation start
 ;Test for ALL CAPS
 on *:text:*:#:{
+  if ($chan = #scarletrever and $nick = Scarbot) {return}
   if $isupper($1) { msg $chan $nick Please don't yell }
   msg $chan /timeout $nick 1 CAPS
 }
