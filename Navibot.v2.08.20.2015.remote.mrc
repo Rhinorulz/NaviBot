@@ -64,30 +64,28 @@ on *:text:!Ping:#: {
 }
 ;begin Channel Commands
 on *:JOIN:#: {
-  if ($chan = #scarletrever ) {return}
+  if ( $chan = #scarletrever ) {return}
   elseif $nick = Rhinorulz  msg $chan Welcome to our overloard $nick
   else msg $chan Welcome to the chanel $nick $+ .  We hope you enjoy your stay.
 }
-
 on *:PART:#:{
   if ($chan = #scarletrever ) {return}
   else msg $chan We wish $nick farewell.
 }
-
 ;moderation start
 ;Test for ALL CAPS
 on *:text:*:#:{
-  if $isupper($1) {msg $chan $nick Please don't yell}
+  if $isupper($1) { msg $chan $nick Please don't yell }
   msg $chan /timeout $nick 1 CAPS
 }
 ;Song checker
 ;Really loud song that blows out speakers and deafens people
-on *:text:*FBcZG1qiji4*:#:{
+on *:text:*FBcZG1qiji4*:#rhinorulz:{
   msg $chan /ban $nick Bad Song
-  msg $chan !delsong 14269479
+  msg $chan !delsong 14313477
 }
 ;really sped up sonic theme that sounds aweful
-on *:text:*tJqtmtIW7HU*:#:{
+on *:text:*tJqtmtIW7HU*:#rhinorulz:{
   msg $chan /ban $nick Bad Song
   msg $chan !delsong 14269871
 }
